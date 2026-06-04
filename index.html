@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>२०२५ चंद्र कैलेंडर - व्यापक त्योहार और इतिहास - 2025 Lunar Calendar - Comprehensive Festivals & History
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="presentation-container">
+        <!-- Enhanced Header with Moonlight Theme -->
+        <header class="presentation-header">
+            <div class="header-left">
+                <div class="om-symbol">🕉️</div>
+                <div class="title-container">
+                    <h1 class="presentation-title">
+                        <span class="hindi-text">२०२५ चंद्र कैलेंडर - व्यापक त्योहार पंचांग</span>
+                        <span class="english-text">2025 Lunar Calendar - Comprehensive Festival Almanac</span>
+                    </h1>
+                    <p class="subtitle">
+                        <span class="hindi-text">भारतीय और अंतर्राष्ट्रीय त्योहारों के साथ विस्तृत इतिहास</span>
+                        <span class="english-text">With Indian & International Festivals plus Detailed History</span>
+                    </p>
+                    <p class="vikram-samvat">विक्रम संवत् २०८२ / Vikram Samvat 2082 🌙</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-controls">
+                    <button class="btn btn--outline btn--sm" id="languageToggle">
+                        <span>🌐</span> <span id="langToggleText">English</span>
+                    </button>
+                    <button class="btn btn--outline btn--sm" id="timelineViewBtn">
+                        <span>📊</span>
+                        <span class="hindi-text">समयरेखा</span>
+                        <span class="english-text">Timeline</span>
+                    </button>
+                    <button class="btn btn--outline btn--sm" id="fullscreenBtn">
+                        <span>🔍</span>
+                        <span class="hindi-text">पूर्ण स्क्रीन</span>
+                        <span class="english-text">Full Screen</span>
+                    </button>
+                </div>
+                <div class="slide-counter">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">365</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Enhanced Navigation with Holiday Filters -->
+        <nav class="presentation-nav">
+            <div class="nav-left">
+                <button class="btn btn--primary btn--sm" id="prevBtn">
+                    ← <span class="hindi-text">पिछला</span><span class="english-text">Previous</span>
+                </button>
+                <button class="btn btn--primary btn--sm" id="nextBtn">
+                    <span class="hindi-text">अगला</span><span class="english-text">Next</span> →
+                </button>
+                <button class="btn btn--secondary btn--sm" id="todayBtn">
+                    📅 <span class="hindi-text">आज</span><span class="english-text">Today</span>
+                </button>
+            </div>
+            <div class="nav-center">
+                <div class="search-container">
+                    <input type="date" id="dateSearch" class="form-control" min="2025-01-01" max="2025-12-31"
+                        value="2025-01-01">
+                    <button class="btn btn--secondary btn--sm" id="jumpToDateBtn">
+                        <span class="hindi-text">तारीख पर जाएं</span><span class="english-text">Jump to Date</span>
+                    </button>
+                </div>
+                <div class="event-filters">
+                    <select id="holidayTypeFilter" class="form-control">
+                        <option value="all">
+                            🌟 <span class="hindi-text">सभी त्योहार</span><span class="english-text">All Holidays</span>
+                        </option>
+                        <option value="national">
+                            🇮🇳 <span class="hindi-text">राष्ट्रीय अवकाश</span><span class="english-text">National
+                                Holidays</span>
+                        </option>
+                        <option value="religious">
+                            🕉️ <span class="hindi-text">धार्मिक त्योहार</span><span class="english-text">Religious
+                                Festivals</span>
+                        </option>
+                        <option value="international">
+                            🌍 <span class="hindi-text">अंतर्राष्ट्रीय दिवस</span><span
+                                class="english-text">International Days</span>
+                        </option>
+                        <option value="cultural">
+                            🎭 <span class="hindi-text">सांस्कृतिक दिवस</span><span class="english-text">Cultural
+                                Days</span>
+                        </option>
+                    </select>
+                    <select id="eventCategoryFilter" class="form-control">
+                        <option value="all">
+                            📜 <span class="hindi-text">सभी घटनाएं</span><span class="english-text">All Events</span>
+                        </option>
+                        <option value="ancient">
+                            🏺 <span class="hindi-text">प्राचीन (ईसा पूर्व)</span><span class="english-text">Ancient
+                                (BC)</span>
+                        </option>
+                        <option value="medieval">
+                            🏰 <span class="hindi-text">मध्यकालीन</span><span class="english-text">Medieval</span>
+                        </option>
+                        <option value="modern">
+                            🏭 <span class="hindi-text">आधुनिक</span><span class="english-text">Modern</span>
+                        </option>
+                        <option value="indian">
+                            🕉️ <span class="hindi-text">भारतीय इतिहास</span><span class="english-text">Indian
+                                History</span>
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="nav-right">
+                <select id="monthSelect" class="form-control">
+                    <option value="">
+                        🌙 <span class="hindi-text">महीना चुनें</span><span class="english-text">Jump to Month</span>
+                    </option>
+                    <option value="0">
+                        <span class="hindi-text">जनवरी</span><span class="english-text">January</span>
+                    </option>
+                    <option value="1">
+                        <span class="hindi-text">फरवरी</span><span class="english-text">February</span>
+                    </option>
+                    <option value="2">
+                        <span class="hindi-text">मार्च</span><span class="english-text">March</span>
+                    </option>
+                    <option value="3">
+                        <span class="hindi-text">अप्रैल</span><span class="english-text">April</span>
+                    </option>
+                    <option value="4">
+                        <span class="hindi-text">मई</span><span class="english-text">May</span>
+                    </option>
+                    <option value="5">
+                        <span class="hindi-text">जून</span><span class="english-text">June</span>
+                    </option>
+                    <option value="6">
+                        <span class="hindi-text">जुलाई</span><span class="english-text">July</span>
+                    </option>
+                    <option value="7">
+                        <span class="hindi-text">अगस्त</span><span class="english-text">August</span>
+                    </option>
+                    <option value="8">
+                        <span class="hindi-text">सितंबर</span><span class="english-text">September</span>
+                    </option>
+                    <option value="9">
+                        <span class="hindi-text">अक्टूबर</span><span class="english-text">October</span>
+                    </option>
+                    <option value="10">
+                        <span class="hindi-text">नवंबर</span><span class="english-text">November</span>
+                    </option>
+                    <option value="11">
+                        <span class="hindi-text">दिसंबर</span><span class="english-text">December</span>
+                    </option>
+                </select>
+            </div>
+        </nav>
+
+        <!-- Progress Bar with Seasonal Markers -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <div class="era-markers">
+                    <div class="era-marker" data-month="0" title="New Year">🎊</div>
+                    <div class="era-marker" data-month="2" title="Spring Festivals">🌸</div>
+                    <div class="era-marker" data-month="5" title="Summer Celebrations">☀️</div>
+                    <div class="era-marker" data-month="7" title="Independence & Monsoon">🇮🇳</div>
+                    <div class="era-marker" data-month="9" title="Festival Season">🪔</div>
+                    <div class="era-marker" data-month="11" title="Winter Festivities">❄️</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Slide Area with Enhanced Layout -->
+        <main class="slide-container">
+            <div class="slide" id="currentSlideContent">
+                <!-- Enhanced Slide Header -->
+                <div class="slide-header">
+                    <div class="date-container">
+                        <h2 class="slide-date" id="slideDate">🌙 1 जनवरी, 2025 / January 1, 2025</h2>
+                        <p class="slide-day" id="slideDay">⭐ बुधवार / Wednesday</p>
+                        <div class="calendar-info">
+                            <p class="hindu-date" id="hinduDate">मार्गशीर्ष शुक्ल द्वादशी</p>
+                            <div class="season-info" id="seasonInfo">
+                                <span class="season-name">शिशिर ऋतु / Winter Season</span>
+                                <span class="season-desc">नई शुरुआत का समय / Time of New Beginnings</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="decorative-elements">
+                        <div class="lotus-decoration">🪷</div>
+                        <div class="om-decoration">🕉️</div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Content Grid -->
+                <div class="slide-content">
+                    <div class="content-grid">
+                        <!-- Enhanced Festivals Section -->
+                        <div class="content-section festivals-section" id="festivalsSection">
+                            <h3 class="section-title">
+                                🕉️ <span class="hindi-text">त्योहार/छुट्टियाँ</span>
+                                <span class="english-text">Festivals/Holidays</span>
+                            </h3>
+                            <div class="section-content" id="festivalsContent">
+                                <p class="loading-content">
+                                    <span class="hindi-text">त्योहार लोड हो रहे हैं...</span>
+                                    <span class="english-text">Loading festivals...</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Enhanced Historical Events Section -->
+                        <div class="content-section history-section" id="historySection">
+                            <h3 class="section-title">
+                                📜 <span class="hindi-text">ऐतिहासिक घटनाएं</span>
+                                <span class="english-text">Historical Events</span>
+                            </h3>
+                            <div class="section-content" id="historyContent">
+                                <div class="timeline-container">
+                                    <p class="loading-content">
+                                        <span class="hindi-text">इतिहास लोड हो रहा है...</span>
+                                        <span class="english-text">Loading history...</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Daily Sanskrit Wisdom Section -->
+                        <div class="content-section inspiration-section" id="inspirationSection">
+                            <h3 class="section-title">
+                                💎 <span class="hindi-text">आज का संदेश</span>
+                                <span class="english-text">Today's Message</span>
+                            </h3>
+                            <div class="section-content" id="inspirationContent">
+                                <p class="loading-content">
+                                    <span class="hindi-text">संदेश लोड हो रहा है...</span>
+                                    <span class="english-text">Loading message...</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Enhanced Interesting Facts Section -->
+                        <div class="content-section fact-section" id="factSection">
+                            <h3 class="section-title">
+                                🌟 <span class="hindi-text">रोचक तथ्य</span>
+                                <span class="english-text">Interesting Facts</span>
+                            </h3>
+                            <div class="section-content" id="factContent">
+                                <p class="loading-content">
+                                    <span class="hindi-text">तथ्य लोड हो रहा है...</span>
+                                    <span class="english-text">Loading fact...</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Enhanced Footer with Holiday Statistics -->
+        <footer class="presentation-footer">
+            <div class="footer-left">
+                <span class="data-source">
+                    <span class="hindi-text">🌙 चंद्र कैलेंडर - 93+ त्योहार, 1000+ ऐतिहासिक घटनाएं, 365 दिन संपूर्ण
+                        जानकारी</span>
+                    <span class="english-text">🌙 Lunar Calendar - 93+ Holidays, 1000+ Historical Events, 365 Days
+                        Complete Information</span>
+                </span>
+            </div>
+            <div class="footer-right">
+                <div class="historical-stats">
+                    <span class="stat-item" id="totalHolidays">
+                        <span class="hindi-text">त्योहार: </span>
+                        <span class="english-text">Holidays: </span>
+                        <strong>93+</strong>
+                    </span>
+                    <span class="stat-item" id="totalHistoricalEvents">
+                        <span class="hindi-text">इतिहास: </span>
+                        <span class="english-text">History: </span>
+                        <strong>1000+</strong>
+                    </span>
+                    <span class="stat-item" id="timeSpanCovered">
+                        <span class="hindi-text">समय सीमा: </span>
+                        <span class="english-text">Time Span: </span>
+                        <strong>5000+ Years</strong>
+                    </span>
+                </div>
+                <div class="footer-buttons">
+                    <button class="btn btn--outline btn--sm" id="summaryBtn">
+                        📊 <span class="hindi-text">सारांश</span><span class="english-text">Summary</span>
+                    </button>
+                    <button class="btn btn--outline btn--sm" id="printBtn">
+                        🖨️ <span class="hindi-text">प्रिंट</span><span class="english-text">Print</span>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Enhanced Summary Modal -->
+    <div class="modal hidden" id="summaryModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    <span class="hindi-text">🌙 २०२५ चंद्र कैलेंडर सारांश</span>
+                    <span class="english-text">🌙 2025 Lunar Calendar Summary</span>
+                </h3>
+                <button class="modal-close" id="closeSummaryBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <h4>
+                            <span class="hindi-text">राष्ट्रीय अवकाश</span>
+                            <span class="english-text">National Holidays</span>
+                        </h4>
+                        <p class="stat-number" id="nationalHolidays">16</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>
+                            <span class="hindi-text">धार्मिक त्योहार</span>
+                            <span class="english-text">Religious Festivals</span>
+                        </h4>
+                        <p class="stat-number" id="religiousFestivals">35+</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>
+                            <span class="hindi-text">अंतर्राष्ट्रीय दिवस</span>
+                            <span class="english-text">International Days</span>
+                        </h4>
+                        <p class="stat-number" id="internationalDays">58+</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>
+                            <span class="hindi-text">ऐतिहासिक घटनाएं</span>
+                            <span class="english-text">Historical Events</span>
+                        </h4>
+                        <p class="stat-number" id="totalEvents">1000+</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>
+                            <span class="hindi-text">संस्कृत श्लोक</span>
+                            <span class="english-text">Sanskrit Quotes</span>
+                        </h4>
+                        <p class="stat-number" id="totalQuotes">365</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>
+                            <span class="hindi-text">रोचक तथ्य</span>
+                            <span class="english-text">Interesting Facts</span>
+                        </h4>
+                        <p class="stat-number" id="totalFacts">365</p>
+                    </div>
+                </div>
+                <div class="summary-description">
+                    <p>
+                        <span class="hindi-text">🌙 यह चंद्र कैलेंडर भारतीय और अंतर्राष्ट्रीय त्योहारों के साथ 5000+
+                            वर्षों के इतिहास को समेटे हुए है। प्रत्येक दिन के लिए संस्कृत ज्ञान, ऐतिहासिक घटनाएं और रोचक
+                            तथ्य शामिल हैं।</span>
+                        <span class="english-text">🌙 This Lunar Calendar encompasses 5000+ years of history with Indian
+                            and International festivals. Each day includes Sanskrit wisdom, historical events, and
+                            interesting facts.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline View Modal -->
+    <div class="modal hidden" id="timelineModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content timeline-modal">
+            <div class="modal-header">
+                <h3>
+                    <span class="hindi-text">🌙 ऐतिहासिक समयरेखा दृश्य</span>
+                    <span class="english-text">🌙 Historical Timeline View</span>
+                </h3>
+                <button class="modal-close" id="closeTimelineBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="timeline-view" id="timelineView">
+                    <p class="loading-content">
+                        <span class="hindi-text">समयरेखा लोड हो रही है...</span>
+                        <span class="english-text">Loading timeline...</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="om-loader">🕉️</div>
+            <p>
+                <span class="hindi-text">🌙 चंद्र कैलेंडर लोड हो रहा है...</span>
+                <span class="english-text">🌙 Loading Lunar Calendar...</span>
+            </p>
+            <p class="loading-detail">
+                <span class="hindi-text">93+ त्योहार और 5000+ वर्षों का इतिहास तैयार किया जा रहा है</span>
+                <span class="english-text">Preparing 93+ holidays and 5000+ years of history</span>
+            </p>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+    <script>
+    window.CHATBOT_COMPANY_ID = "comp_bddaba3e";
+    </script>
+
+    <script src="https://chat-bot-umber-ten.vercel.app/api.js"></script>
+    <script src="https://chat-bot-umber-ten.vercel.app/chat.js?v=10"></script>
+</body>
+
+</html>
