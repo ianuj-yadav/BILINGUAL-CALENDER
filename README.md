@@ -168,4 +168,4 @@ If you found this project helpful, consider giving it a **Star ⭐** on GitHub.
 
 ---
 
-### Made with ❤️ by Anuj Yadav
+### Made by ❤️ by Anuj Yadav
