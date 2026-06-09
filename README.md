@@ -22,16 +22,6 @@ A modern and user-friendly **Bilingual Calendar Application** that displays date
 
 ---
 
-## 🚀 Live Demo
-
-Add your deployed project link here:
-
-```bash
-https://your-live-demo-link.com
-```
-
----
-
 ## 🛠️ Tech Stack
 
 ### Frontend
