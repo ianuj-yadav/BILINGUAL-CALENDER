@@ -107,7 +107,6 @@ Add screenshots of your application here.
 * 🌙 Dark Mode
 * 📱 Progressive Web App (PWA)
 * 🔔 Event & Reminder System
-* ☁️ Cloud Synchronization
 
 ---
 
